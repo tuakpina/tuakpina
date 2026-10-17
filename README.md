@@ -1,7 +1,6 @@
-cat << 'EOF' > README.md
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/tuakpina/tuakpina/main/assets/apple-hero.svg" width="100%" alt="Turan Akpınar - 2Run - Neuron" />
+<img src="assets/apple-hero.svg" width="100%" alt="Turan Akpınar - 2Run - Neuron" />
 
 <br/><br/>
 
@@ -86,4 +85,3 @@ cat << 'EOF' > README.md
     <span style="color: #86868b;">Istanbul, TR</span>
   </sub>
 </div>
-EOF
