@@ -1,6 +1,6 @@
 <div align="center">
 <!-- 1. APPLE GLASSMORPHISM HERO CARD -->
-<img src="./assets/apple-hero.svg" width="100%" alt="Turan Akpınar - 2Run - Neuron" />
+<img src="assets/apple-hero.svg" width="100%" alt="Turan Akpınar - 2Run - Neuron" />
 
 <br/><br/>
 
