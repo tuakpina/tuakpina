@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/apple-hero.svg" width="100%" alt="Turan Akpınar - 2Run - Neuron" />
+<img src="https://tuakpina.github.io/tuakpina/assets/apple-hero.svg" width="100%" alt="Turan Akpınar - 2Run - Neuron" />
 
 <br/><br/>
 
