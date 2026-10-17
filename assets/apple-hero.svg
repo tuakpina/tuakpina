@@ -1,160 +1,75 @@
-{
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
-.canvas {
-font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
-background: radial-gradient(circle at 85% 15%, #1e293b 0%, #0a0a0c 55%, #000000 100%);
-border-radius: 24px;
-padding: 36px 44px;
-color: #f5f5f7;
-border: 1px solid rgba(255, 255, 255, 0.12);
-height: 340px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-position: relative;
-overflow: hidden;
-box-shadow: 0 24px 48px rgba(0, 0, 0, 0.6);
-}
-.ambient-glow {
-position: absolute;
-width: 380px;
-height: 380px;
-background: radial-gradient(circle, rgba(41, 151, 255, 0.14) 0%, rgba(0, 0, 0, 0) 70%);
-top: -140px;
-right: -80px;
-border-radius: 50%;
-animation: breathe 7s ease-in-out infinite alternate;
-}
-@keyframes breathe {
-0% { transform: scale(1) translate(0, 0); opacity: 0.5; }
-100% { transform: scale(1.2) translate(-25px, 20px); opacity: 1; }
-}
-.top-bar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-z-index: 2;
-}
-.window-controls {
-display: flex;
-gap: 8px;
-}
-.dot { width: 12px; height: 12px; border-radius: 50%; }
-.close { background: #ff5f56; }
-.minimize { background: #ffbd2e; }
-.expand { background: #27c93f; }
-.neuron-pill {
-display: flex;
-align-items: center;
-gap: 8px;
-background: rgba(255, 255, 255, 0.06);
-border: 1px solid rgba(255, 255, 255, 0.12);
-padding: 6px 14px;
-border-radius: 999px;
-font-size: 11px;
-font-weight: 600;
-letter-spacing: 0.08em;
-text-transform: uppercase;
-color: #e2e8f0;
-}
-.status-dot {
-width: 7px;
-height: 7px;
-background: #30d158;
-border-radius: 50%;
-box-shadow: 0 0 10px #30d158;
-animation: blink 2.5s infinite;
-}
-@keyframes blink {
-0%, 100% { opacity: 1; }
-50% { opacity: 0.35; }
-}
-.hero-body {
-z-index: 2;
-margin-top: 8px;
-animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-@keyframes slideUp {
-from { opacity: 0; transform: translateY(14px); }
-to { opacity: 1; transform: translateY(0); }
-}
-.eyebrow {
-font-size: 12px;
-font-weight: 600;
-letter-spacing: 0.14em;
-text-transform: uppercase;
-color: #2997ff;
-margin-bottom: 8px;
-}
-.headline {
-font-size: 40px;
-font-weight: 700;
-letter-spacing: -0.03em;
-line-height: 1.1;
-background: linear-gradient(95deg, #ffffff 0%, #f5f5f7 55%, #86868b 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-margin-bottom: 12px;
-}
-.subheadline {
-font-size: 16px;
-font-weight: 400;
-color: #86868b;
-letter-spacing: -0.01em;
-max-width: 620px;
-line-height: 1.5;
-}
-.subheadline b {
-color: #f5f5f7;
-font-weight: 500;
-}
-.bento-footer {
-display: flex;
-justify-content: space-between;
-align-items: center;
-border-top: 1px solid rgba(255, 255, 255, 0.08);
-padding-top: 18px;
-z-index: 2;
-}
-.stack-list {
-display: flex;
-gap: 10px;
-}
-.chip {
-background: rgba(255, 255, 255, 0.04);
-border: 1px solid rgba(255, 255, 255, 0.09);
-padding: 6px 13px;
-border-radius: 10px;
-font-size: 12px;
-font-weight: 500;
-color: #d1d5db;
-letter-spacing: -0.01em;
-}
-.telemetry {
-font-family: "SF Mono", "JetBrains Mono", Menlo, monospace;
-font-size: 11px;
-color: #6e6e73;
-}
+cat << 'EOF' > assets/apple-hero.svg
+<svg viewBox="0 0 840 340" width="840" height="340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGrad" cx="85%" cy="15%" r="90%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="55%" stop-color="#0a0a0c"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2997ff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#2997ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#f5f5f7"/>
+      <stop offset="100%" stop-color="#86868b"/>
+    </linearGradient>
+    <clipPath id="cardClip">
+      <rect x="0" y="0" width="840" height="340" rx="24"/>
+    </clipPath>
+  </defs>
 
-NEURON ARCHITECTURE LABS
+  <g clip-path="url(#cardClip)">
+    <rect x="0" y="0" width="840" height="340" fill="url(#bgGrad)"/>
 
-Turan Akpınar · 2Run
+    <circle cx="720" cy="50" r="240" fill="url(#glowGrad)">
+      <animate attributeName="r" values="200;270;200" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="7s" repeatCount="indefinite"/>
+    </circle>
 
-Engineered for Scale.
+    <circle cx="50" cy="42" r="6" fill="#ff5f56"/>
+    <circle cx="70" cy="42" r="6" fill="#ffbd2e"/>
+    <circle cx="90" cy="42" r="6" fill="#27c93f"/>
 
-Building high-concurrency SaaS infrastructures, low-latency APIs, and distributed backend systems at Neuron.
+    <rect x="576" y="26" width="220" height="30" rx="15" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1"/>
+    <circle cx="594" cy="41" r="4" fill="#30d158">
+      <animate attributeName="opacity" values="1;0.25;1" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="608" y="45" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.2" fill="#e2e8f0">NEURON ARCHITECTURE LABS</text>
 
-Python
+    <text x="44" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2" fill="#2997ff">TURAN AKPINAR · 2RUN</text>
+    <text x="44" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="-1" fill="url(#textGrad)">Engineered for Scale.</text>
 
-FastAPI
+    <text x="44" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#86868b">
+      Building high-concurrency <tspan fill="#f5f5f7" font-weight="600">SaaS infrastructures</tspan>, low-latency APIs,
+    </text>
+    <text x="44" y="226" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#86868b">
+      and distributed backend systems at <tspan fill="#f5f5f7" font-weight="600">Neuron</tspan>.
+    </text>
 
-Redis
+    <line x1="44" y1="268" x2="796" y2="268" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/>
 
-Docker
+    <g transform="translate(44, 284)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#d1d5db">
+      <rect x="0" y="0" width="70" height="28" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.12"/>
+      <text x="35" y="18" text-anchor="middle">Python</text>
 
-SQL
+      <rect x="80" y="0" width="76" height="28" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.12"/>
+      <text x="118" y="18" text-anchor="middle">FastAPI</text>
 
-tuakpina // sys.ready
+      <rect x="166" y="0" width="64" height="28" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.12"/>
+      <text x="198" y="18" text-anchor="middle">Redis</text>
+
+      <rect x="240" y="0" width="72" height="28" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.12"/>
+      <text x="276" y="18" text-anchor="middle">Docker</text>
+
+      <rect x="322" y="0" width="56" height="28" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.12"/>
+      <text x="350" y="18" text-anchor="middle">SQL</text>
+    </g>
+
+    <text x="796" y="302" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#6e6e73">tuakpina // sys.ready</text>
+  </g>
+
+  <rect x="0.5" y="0.5" width="839" height="339" rx="23.5" fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1"/>
+</svg>
+EOF

@@ -1,10 +1,10 @@
+cat << 'EOF' > README.md
 <div align="center">
-<!-- 1. APPLE GLASSMORPHISM HERO CARD -->
-<img src="assets/apple-hero.svg" width="100%" alt="Turan Akpınar - 2Run - Neuron" />
+
+<img src="./assets/apple-hero.svg" width="100%" alt="Turan Akpınar - 2Run - Neuron" />
 
 <br/><br/>
 
-<!-- 2. MINIMALIST TYPING SUBTITLE (CUPEERTINO SILVER) -->
 <a href="https://github.com/tuakpina">
   <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=15&duration=3500&pause=1500&color=86868B&center=true&vCenter=true&width=680&lines=Designing+fault-tolerant+SaaS+infrastructures+and+distributed+systems.;High-throughput+asynchronous+backends+powered+by+FastAPI+%26+Redis.;Laying+the+architectural+foundations+of+Neuron." alt="Typing SVG" />
 </a>
@@ -80,10 +80,13 @@
 
 <br/>
 
-<!-- 4. MINIMALIST FOOTER -->
 <div align="center">
   <sub>
     <b>tuakpina</b> · alias <b>2Run</b> · Architecting <b>Neuron</b><br/>
     <span style="color: #86868b;">Istanbul, TR</span>
   </sub>
 </div>
+EOF
+git add assets/apple-hero.svg README.md
+git commit -m "Fix Apple SVG hero card and clean README"
+git push
