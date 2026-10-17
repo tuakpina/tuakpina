@@ -1,7 +1,7 @@
 <div align="center">
 
-<!-- APPLE BENTO GRID HERO -->
-<img src="https://tuakpina.github.io/tuakpina/assets/apple-hero.svg" width="100%" alt="Turan Akpınar - 2Run - Neuron" />
+<!-- APPLE BENTO GRID HERO (GitHub Pages CDN) -->
+<img src="https://tuakpina.github.io/tuakpina/assets/apple-hero.svg" width="100%" alt="Turan Akpınar · 2Run · Neuron" />
 
 <br/><br/>
 
@@ -54,7 +54,7 @@
     <td width="50%" valign="top">
       <h4>📦 Containerized Cloud Delivery</h4>
       <p>
-        <sub><b>Docker</b> ile izole edilmiş mikroservis paketlemesi. Geliştirme ortamından üretim (production) sunucularına sıfır kesintiyle (zero-downtime) taşınabilen, yatayda ölçeklenmeye hazır standartlaştırılmış konteyner altyapısı.</sub>
+        <sub><b>Docker</b> ile izole edilmiş mikroservis paketlemesi. Geliştirme ortamından üretim (production) sunucularına sıfır kesintili (zero-downtime) taşınabilen, yatayda ölçeklenmeye hazır standartlaştırılmış konteyner altyapısı.</sub>
       </p>
       <p>
         <img src="https://img.shields.io/badge/Docker-141419?style=flat-square&logo=docker&logoColor=2997ff" />
@@ -88,7 +88,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=tuakpina&layout=compact&langs_count=5&bg_color=00000000&title_color=F5F5F7&text_color=86868B&hide_border=true" />
     <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=tuakpina&layout=compact&langs_count=5&bg_color=00000000&title_color=1D1D1F&text_color=86868B&hide_border=true" />
-    <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tuakpina&layout=compact&langs_count=5&bg_color=00000000&title_color=F5F5F7&text_color=86868B&hide_border=true" />
+    <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tuakpina&layout=compact&langs_count=5&bg_color=00000000&title_color=1D1D1F&text_color=86868B&hide_border=true" />
   </picture>
 </div>
 
