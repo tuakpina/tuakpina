@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- APPLE BENTO GRID HERO (GitHub Pages CDN) -->
-<img src="https://tuakpina.github.io/tuakpina/assets/apple-hero.svg?v=2" width="100%" alt="Turan Akpınar · 2Run · Neuron" />
+<img src="https://raw.githubusercontent.com/tuakpina/tuakpina/main/assets/apple-hero.svg?v=3" width="100%" alt="Turan Akpınar · 2Run · Neuron" />
 
 <br/><br/>
 
