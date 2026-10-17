@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- APPLE BENTO GRID HERO (GitHub Pages CDN) -->
-<img src="https://raw.githubusercontent.com/tuakpina/tuakpina/main/assets/apple-hero.svg?v=3" width="100%" alt="Turan Akpınar · 2Run · Neuron" />
+<img src="https://raw.githubusercontent.com/tuakpina/tuakpina/main/assets/apple-hero.svg?v=4" width="100%" alt="Turan Akpınar · 2Run · Neuron" />
 
 <br/><br/>
 
@@ -17,7 +17,7 @@
 &nbsp;
 <img src="https://img.shields.io/badge/Organization-Neuron-0d1117?style=flat-square&labelColor=161b22&color=30d158" />
 &nbsp;
-<img src="https://img.shields.io/badge/Focus-Scalable_SaaS_&_Cloud-0d1117?style=flat-square&labelColor=161b22&color=86868b" />
+<img src="https://img.shields.io/badge/Focus-Scalable_SaaS_%26_Cloud-0d1117?style=flat-square&labelColor=161b22&color=86868b" />
 
 </div>
 
