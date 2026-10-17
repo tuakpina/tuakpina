@@ -1,7 +1,7 @@
 cat << 'EOF' > README.md
 <div align="center">
 
-<img src="./assets/apple-hero.svg" width="100%" alt="Turan Akpınar - 2Run - Neuron" />
+<img src="https://raw.githubusercontent.com/tuakpina/tuakpina/main/assets/apple-hero.svg" width="100%" alt="Turan Akpınar - 2Run - Neuron" />
 
 <br/><br/>
 
@@ -87,6 +87,3 @@ cat << 'EOF' > README.md
   </sub>
 </div>
 EOF
-git add assets/apple-hero.svg README.md
-git commit -m "Fix Apple SVG hero card and clean README"
-git push
